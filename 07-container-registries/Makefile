@@ -17,7 +17,7 @@ push-dockerhub:
 .PHONY: push-github-packages
 push-github-packages:
 	docker tag my-scratch-image ghcr.io/shivpittala19/my-scratch-image # defaults to latest
-	docker push ghcr.io/shivpittala19/my-scratch-image
+	docker push ghcr.io/shivpexchjoittala19/my-scratch-image
 
 	docker tag my-scratch-image ghcr.io/shivpittala19/my-scratch-image:abc-123 # defaults to latest
 	docker push ghcr.io/shivpittala19/my-scratch-image:abc-123

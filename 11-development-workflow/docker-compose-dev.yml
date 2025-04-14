@@ -46,7 +46,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres:foobarbaz@db:5432/postgres
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
     networks:
       - frontend
       - backend  
@@ -67,7 +67,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres:foobarbaz@db:5432/postgres
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
     networks:
       - frontend
       - backend
@@ -79,7 +79,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=foobarbaz
+      - POSTGRES_PASSWORD=postgres
     networks:
       - backend
     ports:

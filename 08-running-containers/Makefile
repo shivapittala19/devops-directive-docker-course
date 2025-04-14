@@ -31,7 +31,7 @@ docker-build-all:
 
 	docker build -t api-golang -f ${DOCKERFILE_DIR}/api-golang/Dockerfile.6 ${DOCKERCONTEXT_DIR}/api-golang/
 
-DATABASE_URL:=postgres://postgres:foobarbaz@db:5432/postgres
+DATABASE_URL:=postgres://postgres:postgres@db:5432/postgres
 
 .PHONY: docker-run-all
 docker-run-all:
@@ -47,7 +47,7 @@ docker-run-all:
 	docker run -d \
 		--name db \
 		--network my-network \
-		-e POSTGRES_PASSWORD=foobarbaz \
+		-e POSTGRES_PASSWORD=postgres \
 		-v pgdata:/var/lib/postgresql/data \
 		-p 5432:5432 \
 		--restart unless-stopped \
